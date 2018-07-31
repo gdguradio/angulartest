@@ -1,0 +1,21 @@
+<form (submit)="loginUser($event)">
+    <input type="text" placeholder="{{username}}" id="username" name="username">
+  <!-- <input type="text" placeholder="{{username}}" id="username" name="username" [value]="" (input)="userNameValue($event)">{{someVar}} -->
+  <!-- <input type="text" placeholder="{{username}}" id="username1" name="username1" [(ngModel)]="someVar1">{{someVar1}} -->
+  <input type="password" placeholder="{{password}}" id="password" name="password">
+  <input type="submit" value="Submit {{bitwiseOR}}" >
+  <!-- {{ doSomeHeavyTask() }} -->
+  <table>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>Online</td>
+    </tr>
+    <tr *ngFor="let item of records;let i = index; let evenNum = even; let oddNum=odd; let firstItem = first; let lastItem = last;" [ngClass]="{odd: oddNum, even: evenNum, first: firstItem, last: lastItem}">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.online}}</td>
+    </tr>
+  </table>
+
+</form>
